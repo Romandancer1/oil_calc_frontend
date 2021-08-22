@@ -1,0 +1,13 @@
+.calculation-params {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 2px solid rosybrown;
+}
+
+.calcualtion-params__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
