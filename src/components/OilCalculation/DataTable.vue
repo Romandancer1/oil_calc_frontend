@@ -8,23 +8,34 @@
                 <span>Добыча в месяц</span>
             </div>
             <div>
-                <span>Дебит, м3/сут</span>
+                <span>Деб.ж</span>
             </div>
         </div>
-        <data-table-row class="data-table__row"
-                        row-data="row-data">
+        <div class="data-table__row"
+             v-for="element in oilData.oil_table.data"
+             v-bind:key="element.id"
+        >
 
-        </data-table-row>
+            <div>
+                <span>{{element.date}}</span>
+            </div>
+            <div>
+                <span>{{element.oil_extraction}}</span>
+            </div>
+            <div>
+                <span>{{element.debit}}</span>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-import DataTableRow from "@/components/OilCalculation/DataTable/DataTableRow";
+import {mapState} from "vuex";
     export default {
         name: "DataTable",
-        components: {
-            DataTableRow
-        }
+        computed: mapState({
+            oilData: state => state.OilData.data
+        })
     }
 </script>
 

@@ -8,6 +8,16 @@
 
 .calcualtion-params__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   margin-bottom: 10px;
+}
+
+.calcualtion-params__wrapper input{
+  justify-self: center;
+  max-width: 100px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.calcualtion-params__wrapper span {
+  justify-self: end;
 }
